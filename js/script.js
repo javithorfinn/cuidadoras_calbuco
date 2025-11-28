@@ -1,6 +1,6 @@
 import { addSharer } from "../components/hisotrySharer.mjs";
+import { initMenuResponsive } from "../components/menuResponsive.mjs";
 import { marqueeListeners } from "../utils/marqueeListeners.mjs";
-import { stories } from "./constants.mjs";
 
 // Contador regresivo hacia el 8 de noviembre, 11:00 AM
 (function () {
@@ -141,12 +141,10 @@ import { stories } from "./constants.mjs";
     });
   });
 
-  // Cerrar modal
   modalClose.addEventListener("click", function () {
     modal.classList.remove("show");
   });
 
-  // Cerrar al hacer click fuera del modal
   modal.addEventListener("click", function (e) {
     if (e.target === modal) {
       modal.classList.remove("show");
@@ -156,3 +154,4 @@ import { stories } from "./constants.mjs";
 
 addSharer();
 marqueeListeners();
+initMenuResponsive();

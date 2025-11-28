@@ -65,7 +65,14 @@
               Apóyanos
             </a>
           </div>
-          <div class="menu-responsive-container">
+        </nav>
+
+        <!-- Este es el menú responsive que aparecerá en móvil -->
+        <div class="menu-responsive-container">
+          <button class="menu-responsive-close" aria-label="Cerrar menú">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="menu-responsive-items">
             <div class="header__nav-item"><a href="index.html">Inicio</a></div>
             <div class="header__nav-item">
               <a href="#proposito">Nosotros</a>
@@ -96,7 +103,7 @@
               </a>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
 
@@ -287,8 +294,8 @@
             <div class="story-card__content">
               <h3>Angelica Maria Jofre</h3>
               <p>
-                Fundadora de <strong>"Las Gemelas"</strong>, un emprendimiento
-                de ajo negro chilote inspirado en el amor por sus hijas.
+                “Las Gemelas” nació de su amor por sus hijas y se convirtió en
+                un emprendimiento de ajo negro chilote que impulsa a su familia.
               </p>
             </div>
           </article>
@@ -298,9 +305,8 @@
             <div class="story-card__content">
               <h3>María Fernanda (Avellanas Tostadas)</h3>
               <p>
-                Emprendió la producción de avellanas tostadas en un momento
-                difícil, convirtiendo la necesidad en una oportunidad para
-                sostener a su familia.
+                Comenzó a tostar avellanas en un momento difícil y transformó
+                esa necesidad en una oportunidad para sostener a su hogar.
               </p>
             </div>
           </article>
@@ -310,8 +316,8 @@
             <div class="story-card__content">
               <h3>Mirta (Tejidos Amancay)</h3>
               <p>
-                Con más de 40 años dedicados al tejido, transforma tradición en
-                arte a través de cada una de sus creaciones.
+                Con más de 40 años tejiendo, convierte tradición en arte a
+                través de piezas únicas hechas con dedicación.
               </p>
             </div>
           </article>
@@ -321,9 +327,8 @@
             <div class="story-card__content">
               <h3>Nieve Paredes Mansilla</h3>
               <p>
-                Especialista en bordados, decoupage y mermeladas artesanales. Su
-                trabajo refleja dedicación y el cariño con el que cuida a su
-                familia.
+                Experta en bordado, decoupage y mermeladas artesanales, combina
+                técnica y cariño en cada uno de sus trabajos.
               </p>
             </div>
           </article>
@@ -400,7 +405,7 @@
           title="Agrupación de Cuidadoras de Calbuco"
         >
           <img
-            src="https://raw.githubusercontent.com/javithorfinn/cuidadoras_calbuco/refs/heads/main/public/Logo_cuidadoras.png"
+            src="public/logo_cuidadoras.png"
             alt="Agrupación de Cuidadoras de Calbuco"
           />
         </a>
@@ -410,7 +415,7 @@
           title="Fondo de Fortalecimiento FFOIP 2025"
         >
           <img
-            src="https://raw.githubusercontent.com/javithorfinn/cuidadoras_calbuco/refs/heads/main/public/Logo_gobierno.png"
+            src="public/logo_gobierno.png"
             alt="Gobierno de Chile - FFOIP 2025"
           />
         </a>
@@ -426,14 +431,20 @@
           target="_blank"
           title="Alpha Docere"
         >
-          <img src="public/logo_comite.png" alt="Comité de ayuda cominitaria de Isla Quihua" />
+          <img
+            src="public/logo_comite.png"
+            alt="Comité de ayuda cominitaria de Isla Quihua"
+          />
         </a>
         <a
           href="https://www.facebook.com/profile.php?id=61572374800779"
           target="_blank"
           title="Alpha Docere"
         >
-          <img src="public/logo_apoyo.png" alt="Red Local de apoyos y Cuidados" />
+          <img
+            src="public/logo_apoyo.png"
+            alt="Red Local de apoyos y Cuidados"
+          />
         </a>
       </div>
     </div>
@@ -442,16 +453,75 @@
     <footer class="footer" id="footer">
       <div class="footer__icons">
         <a href="https://www.facebook.com/cuidadorascalbuco">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-facebook-icon lucide-facebook"
+          >
+            <path
+              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+            />
+          </svg>
         </a>
         <a href="https://www.instagram.com/cuidadorascalbuco/">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-instagram-icon lucide-instagram"
+          >
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
         </a>
         <a href="tel:+56996329550">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-phone-icon lucide-phone"
+          >
+            <path
+              d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+            />
+          </svg>
         </a>
         <a href="mailto:cuidadorascalbucospfm@gmail.com">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-mail-icon lucide-mail"
+          >
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+          </svg>
         </a>
       </div>
       <p class="footer__copy">
