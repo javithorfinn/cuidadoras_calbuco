@@ -134,7 +134,7 @@ body{
 
 /* header */
 .site-header{
-  background:linear-gradient(rgba(56,23,97,.65), rgba(119,46,180,.55)), url(/img/header.jpg) center/cover no-repeat;
+  background:linear-gradient(rgba(56,23,97,.65), rgba(119,46,180,.55)), url(https://raw.githubusercontent.com/javithorfinn/cuidadoras_calbuco/refs/heads/main/public/header.jpg) center/cover no-repeat;
   color:#fff;
 }
 .hero{
