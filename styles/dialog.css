@@ -1,0 +1,26 @@
+dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  animation: slideIn .3s forwards ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-500%);
+    }
+  }
