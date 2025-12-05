@@ -1,0 +1,11 @@
+.swiper {
+  width: 480px;
+  height: 540px;
+  border-radius: 12px;
+}
+
+@media (width < 700px) {
+  .swiper {
+    width: 100%;
+  }
+}

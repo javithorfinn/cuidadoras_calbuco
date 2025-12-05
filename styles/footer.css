@@ -1,0 +1,33 @@
+/* FOOTER */
+.footer {
+  border-top: 1px solid #eee;
+  background: var(--bg-footer);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-block: 1.5rem;
+}
+
+.footer__icons a {
+  font-size: 1.3rem;
+  padding: 4px 6px 0;
+  border-radius: 50%;
+}
+
+.footer__icons a:hover {
+  scale: 1.1;
+  background: #e8a87768;
+}
+
+.footer__copy {
+  padding-top: 2rem;
+  border-top: 1px solid #d6d6d6;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}

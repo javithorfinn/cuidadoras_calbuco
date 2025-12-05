@@ -1,0 +1,76 @@
+/* PROPÓSITO */
+.purpose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.purpose__globe {
+  padding: 4px 8px;
+  background-color: var(--bg-globe);
+  border-radius: 999px;
+}
+
+.purpose__title {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.purpose__text p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.purpose__quote {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbf1ea;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgb(229, 224, 221);
+  gap: 2px;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-dark);
+}
+
+.purpose__gallery {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Contenedor que superpone las imágenes */
+.purpose__carrusel_images {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.purpose__carrusel_images img {
+  grid-area: 1 / 1; /* coloca todas en la misma celda para superponer */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.purpose__carrusel_images img.active {
+  opacity: 1;
+}
+
+@media (width < 700px) {
+  .purpose {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .purpose__gallery {
+    width: 100%;
+  }
+}

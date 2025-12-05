@@ -1,0 +1,1 @@
+export const copyToClipBoard = async (content) => await navigator.clipboard.writeText(content);

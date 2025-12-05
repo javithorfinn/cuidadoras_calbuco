@@ -3,17 +3,18 @@ import { shareContent } from "../utils/shareContent.mjs";
 
 export const addSharer = () => {
   stories.forEach((story) => {
-    const historyContent = story.querySelector(".story-card__content");
+    const historyContent = story.querySelector(".story_card__content");
 
     const titleEl = historyContent.querySelector("h3");
     const textEl = historyContent.querySelector("p");
 
     const shareButton = document.createElement("button");
 
+    shareButton.classList.add("share__button");
     shareButton.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" 
-          width="24" 
-          height="24" 
+          width="20" 
+          height="20" 
           viewBox="0 0 24 24" 
           fill="none" 
           stroke="currentColor" 
@@ -25,9 +26,7 @@ export const addSharer = () => {
           <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
       </svg>
     `;
-
-    shareButton.style.float = "right";
-
+    shareButton.title = `Compartir la historia de ${titleEl.innerText}`;
     shareButton.onclick = async () => {
       const title = titleEl.innerText;
       const text = textEl.innerText;

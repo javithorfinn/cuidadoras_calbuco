@@ -13,39 +13,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Iconos -->
     <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/dialog.css" />
+    <link rel="stylesheet" href="styles/hero.banner.css" />
+    <link rel="stylesheet" href="styles/purpose.css" />
+    <link rel="stylesheet" href="styles/stories.css" />
+    <link rel="stylesheet" href="styles/swiper.css" />
+    <link rel="stylesheet" href="styles/helpers.logos.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-8BHBZKE6YN"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-8BHBZKE6YN");
+  </script>
+  <!-- Swiper js
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> -->
 
   <body>
     <!-- HEADER -->
     <header class="header">
       <div class="header__inner">
-        <div class="header__logo">
-          <img src="public/Logo_cuidadoras.png" alt="Logo Agrupación" />
-          <span>Agrupación de Cuidadoras<br />de Calbuco</span>
-        </div>
+        <a href="/" class="header__logo">
+          <img
+            src="images/Logo_cuidadoras.png"
+            alt="Logo Agrupación"
+            loading="eager"
+          />
+          <span>Agrupación Cuidadoras<br />de Calbuco</span>
+        </a>
 
         <button class="header__toggle" aria-label="Abrir menú">
-          <i class="fas fa-bars"></i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-text-align-end-icon lucide-text-align-end"
+          >
+            <path d="M21 5H3" />
+            <path d="M21 12H9" />
+            <path d="M21 19H7" />
+          </svg>
         </button>
 
         <nav class="header__nav">
-          <div class="header__nav-item"><a href="index.html">Inicio</a></div>
-          <div class="header__nav-item"><a href="#proposito">Nosotros</a></div>
+          <div class="header__nav-item"><a href="#proposito">Nosotras</a></div>
           <div class="header__nav-item"><a href="#historias">Historias</a></div>
           <div class="header__nav-item"><a href="#footer">Contacto</a></div>
           <div class="header__nav-item">
-            <a href="#" class="button button-animation">
+            <button class="button button-animation donation-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -63,26 +107,40 @@
                 />
               </svg>
               Apóyanos
-            </a>
+            </button>
           </div>
         </nav>
 
         <!-- Este es el menú responsive que aparecerá en móvil -->
         <div class="menu-responsive-container">
           <button class="menu-responsive-close" aria-label="Cerrar menú">
-            <i class="fas fa-times"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-x-icon lucide-x"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
           </button>
           <div class="menu-responsive-items">
             <div class="header__nav-item"><a href="index.html">Inicio</a></div>
             <div class="header__nav-item">
-              <a href="#proposito">Nosotros</a>
+              <a href="#proposito">Nosotras</a>
             </div>
             <div class="header__nav-item">
               <a href="#historias">Historias</a>
             </div>
             <div class="header__nav-item"><a href="#footer">Contacto</a></div>
             <div class="header__nav-item">
-              <a href="#" class="button button-animation">
+              <button class="button button-animation donation-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -100,7 +158,7 @@
                   />
                 </svg>
                 Apóyanos
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -109,14 +167,12 @@
 
     <!-- BANNER -->
     <section class="banner">
-      <h2 class="banner__title">Soñando por un futuro mejor</h2>
+      <h2 class="banner__title">Soñando por un Futuro Mejor</h2>
       <p class="banner__lead">
         Somos una red de amor, dedicación y unión en <strong>Calbuco</strong>.
         Trabajamos para visualizar y potenciar los derechos de quienes cuidan.
       </p>
-      <a href="#main" class="button">
-        <i class="fas fa-chevron-down"></i> Conoce nuestra labor
-      </a>
+      <a href="#proposito" class="button">Conoce nuestra labor</a>
     </section>
 
     <!-- MAIN -->
@@ -124,63 +180,71 @@
       <!-- PROPÓSITO -->
       <section id="proposito" class="purpose">
         <div class="purpose__text">
+          <span class="purpose__globe">Sobre Nosotras</span>
+          <h2 class="purpose__title">
+            Cada familia, cada cuidadora y cada historia nos inspira
+          </h2>
           <p>
-            En nuestra agrupación trabajamos día a día con amor, dedicación y
-            unión. Cada familia, cada cuidadora y cada historia nos inspira a
-            seguir avanzando.
+            En nuestra agrupación trabajamos día a día acompañando a familias y
+            cuidadoras con espacios de encuentro, formación y contención.
           </p>
           <blockquote class="purpose__quote">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-quote-icon lucide-quote"
-              style="rotate: 180deg"
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="#d7b6aaeb"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-quote-icon lucide-quote"
+                style="rotate: 180deg"
+              >
+                <path
+                  d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
+                />
+                <path
+                  d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
+                />
+              </svg>
+              No tienes que doblegarte, tienes que salir adelante luchando
+              siempre.
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="#d7b6aaeb"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-quote-icon lucide-quote"
+              >
+                <path
+                  d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
+                />
+                <path
+                  d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
+                />
+              </svg>
+            </span>
+            <small style="margin-top: 8px"
+              >Nieve Paredes Mansilla - Cuidadora de Fernanda</small
             >
-              <path
-                d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-              />
-              <path
-                d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-              />
-            </svg>
-            No tienes que doblegarte, tienes que salir adelante luchando
-            siempre.
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-quote-icon lucide-quote"
-            >
-              <path
-                d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-              />
-              <path
-                d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-              />
-            </svg>
           </blockquote>
         </div>
-        <div class="purpose__gallery">
-          <div class="purpose__carrusel_images">
+        <div class="purpose__gallery featured_carrousel">
+          <div class="purpose__carrusel_images carrousel">
             <img
-              src="public/calbuco.png"
+              src="images/calbuco.png"
               alt="Encuentro comunitario en Calbuco"
             />
             <img
-              src="public/calbuco2.png"
+              src="images/calbuco2.png"
               alt="Encuentro comunitario en Calbuco"
             />
           </div>
@@ -188,9 +252,11 @@
       </section>
 
       <!-- ACTIVIDADES -->
+      <span class="activity__globe">Lo que hacemos</span>
       <h2 class="section-title">Nuestras Actividades Principales</h2>
       <p class="section-text">
-        Generamos espacios de encuentro, visibilización y aprendizaje.
+        Generamos espacios de encuentro, visibilización, autocuidado y
+        aprendizaje.
       </p>
       <section class="activities">
         <article class="activity-card">
@@ -217,7 +283,8 @@
           <h3>Feria Expo Cuidadoras</h3>
           <p>
             Un hito comunitario con música, arte y gastronomía para visibilizar
-            el talento y trabajo de las cuidadoras de Calbuco.
+            el talento, el trabajo y los emprendimientos de las cuidadoras de
+            Calbuco.
           </p>
         </article>
 
@@ -248,7 +315,7 @@
           <h3>Talleres de Bienestar</h3>
           <p>
             Espacios seguros de autocuidado, contención emocional y aprendizaje
-            de nuevas herramientas para el día a día.
+            de nuevas herramientas para el día a día de nuestras asociadas.
           </p>
         </article>
 
@@ -282,6 +349,7 @@
 
       <!-- HISTORIAS -->
       <section id="historias" class="stories">
+        <span class="activity__globe">Inspiración</span>
         <h2 class="section-title">Historias de Esfuerzo y Amor</h2>
         <p class="section-text">
           Conoce a las mujeres valientes detrás de la agrupación y sus
@@ -289,55 +357,112 @@
         </p>
 
         <div class="stories__grid">
-          <article class="story-card">
-            <img src="public/pic01.jpg" alt="Angelica" />
-            <div class="story-card__content">
-              <h3>Angelica Maria Jofre</h3>
+          <h3 style="text-align: center;">Historias Destacadas</h3>
+
+          <article
+            class="story-card"
+            data-url="https://www.youtube-nocookie.com/embed/jNvY-ivL4r0?si=x7VIKnfRIXaqYZ_a"
+          >
+            <div class="story__image">
+              <img src="images/angelica_jofre.webp" alt="Angelica" />
+            </div>
+            <div class="story_card__content">
+              <time>25 de Noviembre 2025</time>
+              <h3>Las Gemelas, Parcela Yahuilo</h3>
+              <small>por Angélica Jofre Marín</small>
               <p>
-                “Las Gemelas” nació de su amor por sus hijas y se convirtió en
-                un emprendimiento de ajo negro chilote que impulsa a su familia.
+                Emprendimiento dedicado a la producción de ajo negro chilote en
+                diversos formatos y mixturas con otros productos locales,
+                creando un resultado natural y gourmet que impulsa a su familia.
               </p>
             </div>
           </article>
 
-          <article class="story-card">
-            <img src="public/pic02.jpg" alt="Avellanas tostadas" />
-            <div class="story-card__content">
-              <h3>María Fernanda (Avellanas Tostadas)</h3>
+          <article
+          class="story-card"
+          data-url="https://www.youtube-nocookie.com/embed/-DExEvMvkL8?si=xSZ3dZR31EkRZGa_"
+        >
+          <div class="story__image">
+            <img src="images/paredes_mansilla.webp" alt="Nieve Paredes" />
+          </div>
+          <div class="story_card__content">
+            <time>25 de Noviembre 2025</time>
+            <h3>Artesanía y Repostería Nieve</h3>
+            <small>por Nieve Paredes Mansilla</small>
+            <p>
+              A través del bordado, decoupage y mermeladas artesanales, entre
+              otras, combina técnicas y cariño en cada uno de sus trabajos
+            </p>
+          </div>
+        </article>
+
+        <article
+          class="story-card"
+          data-url="https://www.youtube-nocookie.com/embed/O3n2gB7TSuI?si=srQ82HXZZb5UHclE"
+        >
+          <div class="story__image">
+            <img src="images/ida_munoz.webp" alt="Ida Muñoz" />
+          </div>
+          <div class="story_card__content">
+            <time>25 de Noviembre 2025</time>
+            <h3>Creaciones Dulce Emilia</h3>
+            <small>por Ida Muñoz Antiman</small>
+            <p>
+              Aros de arcilla polimérica, repostería tradicional —kuchen,
+              galletas y otros—, además de productos del mundo ecotextil como
+              carteras, cosmetiqueros, scrunchies y espejos decorados con
+              macramé.
+            </p>
+          </div>
+        </article>
+
+          <article
+            class="story-card"
+            data-url="https://www.youtube.com/embed/Aem1OIweqMI?si=wljNxNRpXSxaMfdU"
+          >
+            <div class="story__image">
+              <img src="images/gin_zamorano.webp" alt="Avellanas tostadas" />
+            </div>
+            <div class="story_card__content">
+              <time>5 de Noviembre 2025</time>
+              <h3>Avellanas Tostadas Bosque Aventura</h3>
+              <small>por Gin Nah Zamorano</small>
               <p>
                 Comenzó a tostar avellanas en un momento difícil y transformó
-                esa necesidad en una oportunidad para sostener a su hogar.
+                esa necesidad en una oportunidad para sostener a su hogar,
+                ofreciendo un alimento de gran calidad, sabor y producido con
+                ingenio y responsabilidad.
               </p>
             </div>
           </article>
 
-          <article class="story-card">
-            <img src="public/pic03.jpg" alt="Tejidos Amancay" />
-            <div class="story-card__content">
-              <h3>Mirta (Tejidos Amancay)</h3>
+          <article
+            class="story-card"
+            data-url="https://www.youtube-nocookie.com/embed/bxVPKjAhCmQ?si=AshG_pa3jVseG7tC"
+          >
+            <div class="story__image">
+              <img src="images/mirta_diaz.webp" alt="Tejidos Amancay" />
+            </div>
+            <div class="story_card__content">
+              <time>4 de Noviembre 2025</time>
+              <h3>Tejidos Amancay</h3>
+              <small>por Mirta Díaz Zapata</small>
               <p>
                 Con más de 40 años tejiendo, convierte tradición en arte a
-                través de piezas únicas hechas con dedicación.
+                través de piezas únicas hechas con dedicación, con lanas nuevas
+                y también recicladas
               </p>
             </div>
           </article>
 
-          <article class="story-card">
-            <img src="public/pic04.jpg" alt="Nieve Paredes" />
-            <div class="story-card__content">
-              <h3>Nieve Paredes Mansilla</h3>
-              <p>
-                Experta en bordado, decoupage y mermeladas artesanales, combina
-                técnica y cariño en cada uno de sus trabajos.
-              </p>
-            </div>
-          </article>
         </div>
       </section>
+
     </main>
 
     <!-- CTA -->
     <section class="cta">
+      <span class="activity__globe">¡Subscíbete a nuestra comunidad!</span>
       <div class="cta__inner">
         <h2>¿Quieres ser parte de nuestra <strong>red de apoyo</strong>?</h2>
         <p>
@@ -345,7 +470,7 @@
           cuidado digno.
         </p>
         <div class="cta__buttons">
-          <a href="#" class="button button-animation">
+          <button class="button button-animation donation-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -368,8 +493,11 @@
               />
             </svg>
             Hacer una donación
-          </a>
-          <a href="#" class="button button--secondary button-animation">
+          </button>
+          <button
+            class="button button--secondary button-animation"
+            id="wap-contact"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -390,13 +518,16 @@
               <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
               <path d="M3 4h8" />
             </svg>
-            Contactanos
-          </a>
+            Contáctanos
+          </button>
         </div>
       </div>
     </section>
 
     <!-- HELPERS LOGOS -->
+    <div class="helpers__logo__tilte">
+      <h3>Organizaciones con Quienes Trabajamos Colaborativamente</h3>
+    </div>
     <div class="helpers-logos">
       <div id="marquee">
         <a
@@ -405,7 +536,7 @@
           title="Agrupación de Cuidadoras de Calbuco"
         >
           <img
-            src="https://raw.githubusercontent.com/javithorfinn/cuidadoras_calbuco/refs/heads/main/public/Logo_cuidadoras.png"
+            src="images/logo_cuidadoras.png"
             alt="Agrupación de Cuidadoras de Calbuco"
           />
         </a>
@@ -415,7 +546,7 @@
           title="Fondo de Fortalecimiento FFOIP 2025"
         >
           <img
-            src="https://raw.githubusercontent.com/javithorfinn/cuidadoras_calbuco/refs/heads/main/public/Logo_gobierno.png"
+            src="images/logo_gobierno.png"
             alt="Gobierno de Chile - FFOIP 2025"
           />
         </a>
@@ -424,33 +555,103 @@
           target="_blank"
           title="Alpha Docere"
         >
-          <img src="public/logo_alpha_docere.png" alt="Alpha Docere" />
+          <img src="images/logo_alpha_docere.png" alt="Alpha Docere" />
         </a>
         <a
           href="https://www.facebook.com/profile.php?id=61572374800779"
           target="_blank"
-          title="Alpha Docere"
+          title="Comité de ayuda cominitaria de Isla Quihua"
         >
           <img
-            src="public/logo_comite.png"
+            src="images/logo_comite.png"
             alt="Comité de ayuda cominitaria de Isla Quihua"
           />
         </a>
         <a
-          href="https://www.facebook.com/profile.php?id=61572374800779"
+          href="https://www.instagram.com/prlac.calbuco/"
           target="_blank"
-          title="Alpha Docere"
+          title="Red Local de apoyos y Cuidados"
         >
           <img
-            src="public/logo_apoyo.png"
+            src="images/logo_apoyo.png"
             alt="Red Local de apoyos y Cuidados"
           />
         </a>
+        <a
+          href="https://www.instagram.com/discapacidad_calbuco/ "
+          target="_blank"
+          title="Oficina de discapacidad de Calbuco"
+        >
+          <img
+            src="images/teleton_logo.png"
+            alt="Oficina de discapacidad e Calbuco"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/cuidadorascalbuco/"
+          target="_blank"
+          title="Agrupación de Cuidadoras de Calbuco"
+        >
+          <img
+            src="images/logo_cuidadoras.png"
+            alt="Agrupación de Cuidadoras de Calbuco"
+          />
+        </a>
+        <a
+          href="https://www.fondodefortalecimiento.gob.cl/"
+          target="_blank"
+          title="Fondo de Fortalecimiento FFOIP 2025"
+        >
+          <img
+            src="images/logo_gobierno.png"
+            alt="Gobierno de Chile - FFOIP 2025"
+          />
+        </a>
+        <a
+          href="https://www.alphadocere.cl/"
+          target="_blank"
+          title="Alpha Docere"
+        >
+          <img src="images/logo_alpha_docere.png" alt="Alpha Docere" />
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61572374800779"
+          target="_blank"
+          title="Comité de ayuda cominitaria de Isla Quihua"
+        >
+          <img
+            src="images/logo_comite.png"
+            alt="Comité de ayuda cominitaria de Isla Quihua"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/prlac.calbuco/"
+          target="_blank"
+          title="Red Local de apoyos y Cuidados"
+        >
+          <img
+            src="images/logo_apoyo.png"
+            alt="Red Local de apoyos y Cuidados"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/discapacidad_calbuco/"
+          target="_blank"
+          title="Oficina de discapacidad de Calbuco"
+        >
+          <img
+            src="images/teleton_logo.png"
+            alt="Oficina de discapacidad de Calbuco"
+          />
+        </a>
       </div>
+      <div class="shadow__right"></div>
+      <div class="shadow__left"></div>
     </div>
 
     <!-- FOOTER -->
     <footer class="footer" id="footer">
+      <small>¡Síguenos en nuestras redes o contáctanos!</small>
       <div class="footer__icons">
         <a href="https://www.facebook.com/cuidadorascalbuco">
           <svg
@@ -531,5 +732,5 @@
     </footer>
   </body>
 
-  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/index.js"></script>
 </html>

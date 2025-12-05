@@ -1,6 +1,6 @@
 :root {
-  --font-title: "Sora", sans-serif;
-  --font-body: "Poppins", sans-serif;
+  --font-title: "Playfair Display", "Playfair Display Fallback", serif;
+  --font-body: "DM Sans", "DM Sans Fallback", system-ui, sans-serif;
 
   --color-primary: #1c1f23;
   --color-secondary: #636a73;
@@ -9,6 +9,8 @@
   --bg-body: #f8f9fa;
   --bg-surface: #ffffff;
   --bg-footer: #f0f1f3;
+  --bg-globe: #9cc39b55;
+  --bg-light: #fbf1ea;
 
   --text-main: #1c1f23;
   --text-light: #636a73;
@@ -35,6 +37,7 @@ body {
   color: var(--text-main);
   background: var(--bg-body);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -55,15 +58,57 @@ img {
   display: block;
 }
 
+/* BOTONES */
 button {
   cursor: pointer;
   border: none;
   background: none;
 }
 
-/* HEADER */
+.button {
+  padding: 0.75rem 1.3rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.button:hover {
+  opacity: 0.9;
+  color: var(--text-hover);
+  outline-offset: 2px;
+  outline: 1px solid var(--text-hover);
+}
+
+.button:hover .lucide-heart {
+  fill: #e7551e;
+}
+
+.button-animation:hover .svg-animation {
+  stroke-dasharray: 1300;
+  stroke-dashoffset: 1300;
+  animation: dash 2s ease-in forwards;
+}
+
+@keyframes dash {
+  70% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 100%;
+    stroke-dashoffset: 0;
+    stroke-width: 1;
+  }
+}
+
+/* HEADER - NAV */
 .header {
   background: #f0f1f3cc;
+  width: 100%;
   border-bottom: 1px solid #eee;
   padding: 1.2rem 0;
   z-index: 10;
@@ -90,6 +135,11 @@ button {
 .header__logo img {
   width: 120px;
   height: 85px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__logo img:hover {
+  scale: 1.1;
 }
 
 .header__nav {
@@ -172,6 +222,11 @@ button {
   transition: var(--transition);
 }
 
+.menu-responsive-items .header__nav-item button {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .menu-responsive-items .header__nav-item a:hover {
   color: var(--text-hover);
 }
@@ -179,81 +234,6 @@ button {
 .menu-responsive-items .button {
   margin-top: 1rem;
   justify-content: center;
-}
-
-/* BANNER */
-.banner {
-  position: relative;
-  padding: 5rem 0;
-  min-height: 54vh;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(70, 70, 70, 0.5),
-      rgba(105, 105, 105, 0.5)
-    ),
-    url("https://raw.githubusercontent.com/javithorfinn/cuidadoras_calbuco/refs/heads/main/public/header.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  text-align: center;
-}
-
-.banner__title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #ffffff;
-  text-shadow: 1px 2px 3px #1c1f23;
-}
-
-.banner__lead {
-  width: min(700px, 90%);
-  margin: 1rem auto;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  color: #d9dce0;
-  text-shadow: 1px 2px 3px #1c1f23;
-}
-
-/* BOTONES */
-.button {
-  padding: 0.75rem 1.3rem;
-  border-radius: var(--radius-sm);
-  background: var(--color-primary);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.button:hover {
-  opacity: 0.9;
-  color: var(--text-hover);
-  outline-offset: 2px;
-  outline: 1px solid var(--text-hover);
-}
-
-.button:hover .lucide-heart {
-  fill: #e7551e;
-}
-
-.button-animation:hover .svg-animation {
-  stroke-dasharray: 1300;
-  stroke-dashoffset: 1300;
-  animation: dash 2s ease-in forwards;
-}
-
-@keyframes dash {
-  70% {
-    fill-opacity: 0;
-  }
-  100% {
-    fill-opacity: 100%;
-    stroke-dashoffset: 0;
-    stroke-width: 1;
-  }
 }
 
 /* MAIN */
@@ -264,7 +244,7 @@ button {
 
 .section-title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-size: 2rem;
   font-weight: 800;
 }
@@ -276,37 +256,17 @@ button {
   color: var(--text-light);
 }
 
-/* PROPÓSITO */
-.purpose {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.purpose__text p {
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-}
-
-.purpose__quote {
-  font-style: italic;
-  font-weight: 100;
-  color: var(--text-dark);
-}
-
-.purpose__gallery {
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-}
-
-.purpose__carrusel_images {
-  display: flex;
-  overflow-x: scroll;
-}
-
 /* ACTIVIDADES */
+.activity__globe {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 64px auto 0;
+  padding: 4px 8px;
+  background-color: var(--bg-globe);
+  border-radius: 999px;
+}
+
 .activities {
   margin-top: 4rem;
   display: grid;
@@ -326,49 +286,6 @@ button {
   font-size: 2.5rem;
   color: var(--text-hover);
   margin-bottom: 0.8rem;
-}
-
-/* HISTORIAS */
-.stories {
-  margin-top: 5rem;
-}
-
-.stories__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.story-card {
-  background: var(--bg-surface);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid #eee;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Imagen dentro de la tarjeta */
-.story-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-/* Hover solo en la imagen */
-.story-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Contenido de la tarjeta */
-.story-card__content {
-  padding: 1.5rem;
-}
-
-.story-card__content h3 {
-  margin: 0 0 0.8rem;
-  font-size: 1.3rem;
 }
 
 /* CTA */
@@ -393,88 +310,6 @@ button {
   display: flex;
   justify-content: center;
   gap: 1rem;
-}
-
-/* HELPERS LOGOS */
-.helpers-logos {
-  position: relative;
-  width: 640px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 24px;
-  overflow: hidden;
-  margin-bottom: 12px;
-}
-
-#marquee {
-  display: flex;
-  flex-wrap: nowrap;
-  animation: slide 20s linear infinite;
-}
-
-.helpers-logos a {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-.helpers-logos img {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: 0.6s;
-}
-
-.helpers-logos img:hover {
-  filter: grayscale(0%);
-  scale: 1.08;
-}
-
-/* ANIMACIÓN ESTABLE */
-@keyframes slide {
-  from {
-    transform: translateX(-80%);
-  }
-  to {
-    transform: translateX(80%);
-  }
-}
-
-/* FOOTER */
-.footer {
-  background: var(--bg-footer);
-  padding: 2.5rem 0;
-  text-align: center;
-}
-
-.footer__icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.footer__icons a {
-  font-size: 1.3rem;
-  padding: 4px 6px 0;
-  border-radius: 50%;
-}
-
-.footer__icons a:hover {
-  scale: 1.1;
-  background: #f17a1e68;
-}
-
-.footer__copy {
-  font-size: 0.9rem;
-  color: var(--text-light);
 }
 
 /* RESPONSIVE */
@@ -505,7 +340,7 @@ button {
   }
 
   .banner {
-    margin-top: 160px;
+    margin-top: 100px;
   }
 
   .helpers-logos {

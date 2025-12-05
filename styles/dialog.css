@@ -1,10 +1,61 @@
 dialog {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100dvh;
-  animation: slideIn .3s forwards ease-in-out;
+  width: 60%;
+  border: none;
+  padding: 0;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  animation: slideIn 0.3s forwards ease-in-out;
+}
+
+dialog > section {
+  padding: 16px;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+  cursor: alias;
+}
+
+.close__dialog__icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 4px 0;
+  border-radius: 50%;
+}
+
+.copy__content__btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.75rem 1.3rem;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #1c1f23;
+}
+
+.copy__content__btn:hover {
+  color: #e7551e;
+}
+
+.close__dialog__icon:hover {
+  background-color: #e7541e4a;
+}
+
+.copied__content {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  translate: -45% -45%;
+  padding: 0.75rem 1.3rem;
+  background-color: #1c1f23;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  animation: slideFromTop 0.3s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -17,10 +68,36 @@ dialog {
 }
 
 @keyframes slideOut {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-500%);
-    }
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-500%);
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-500%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes exploit {
+  to { transform: skewX(-15px); opacity: 0; }
+}
+
+dialog iframe {
+  width: 100%;
+  height: 400px;
+  padding-top: 16px;
+  border-radius: 12px;
+}
+
+@media (width < 700px) {
+  dialog {
+    width: 80%;
+  }
+}
