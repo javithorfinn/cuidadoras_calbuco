@@ -14,7 +14,7 @@ export const showDialog = async ({ content }, callback = () => {}) => {
   const controller = new AbortController();
 
   const closeDialog = () => {
-    dialog.style.animation = "slideOut 0.4s forwards ease-out";
+    dialog.style.animation = "zoomOut 0.4s forwards ease-out";
 
     dialog.addEventListener(
       "animationend",
